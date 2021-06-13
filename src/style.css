@@ -1,3 +1,52 @@
-h1, p {
+h1,
+p {
   font-family: Lato;
+}
+body {
+  background: #000;
+}
+
+.bubbles {
+  display: flex;
+}
+
+.bubble {
+  width: 50px;
+  height: 50px;
+  background: brown;
+  display: grid;
+  place-content: center;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  transition: 0.3s border linear, 0.9s color linear;
+  position: relative;
+}
+
+.bubble--current:after {
+  content: '>';
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(50px, -50%, 0);
+  font-size: 11px;
+}
+
+.bubble--right {
+  border: 5px solid yellow;
+  color: #fff;
+}
+
+.bubble--left {
+  border: 5px solid yellow;
+  color: #fff;
+}
+
+.bubble--moving {
+  border: 5px solid lightgreen;
+  color: #fff;
+}
+
+button {
+  margin-right: 10px;
 }
